@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_20_053235) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_20_064307) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,7 +29,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_20_053235) do
     t.bigint "characters_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "map_id", null: false
     t.index ["characters_id"], name: "index_farming_data_on_characters_id"
+    t.index ["map_id"], name: "index_farming_data_on_map_id"
   end
 
   create_table "maps", force: :cascade do |t|
@@ -41,4 +43,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_20_053235) do
   end
 
   add_foreign_key "farming_data", "characters", column: "characters_id"
+  add_foreign_key "farming_data", "maps"
 end
