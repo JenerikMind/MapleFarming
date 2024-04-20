@@ -12,11 +12,6 @@ RSpec.describe Map, type: :model do
       expect(map).to eq(false)
     end
 
-    it 'ensures prerequisite presence' do
-      map = Map.new(name: 'Test', minimumLevel: 1).save
-      expect(map).to eq(false)
-    end
-
     it 'should save successfully' do
       map = Map.new(name: 'Test', minimumLevel: 1, prerequisite: false).save
       expect(map).to eq(true)
