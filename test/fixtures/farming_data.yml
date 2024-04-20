@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expHour: 1
+  mesoHour: 1
+  enemyHour: 1
+  character: one
+
+two:
+  expHour: 1
+  mesoHour: 1
+  enemyHour: 1
+  character: two
